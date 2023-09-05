@@ -1,7 +1,7 @@
-import { SignIn } from "@clerk/nextjs";
+
 
 const SignInPage =()=>
 {
-    return <div><SignIn/></div>
+    return <div>Hi</div>
 }
 export default SignInPage
