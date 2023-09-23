@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { auth } from '@clerk/nextjs'
-
 export default  async function Home()
   
 {
