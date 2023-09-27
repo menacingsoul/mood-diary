@@ -26,14 +26,12 @@ const Editor = ({ entry }) => {
       setIsLoading(false)
     },
   })
-  
- 
-
-  const date = new Date(entry.createdAt).toDateString()
   const handleManualSave = async () => {
     setIsLoading(true)
+    
     try {
       const updated = await updateEntry(entry.id, value)
+      setAnalysis(value.analysis)
       setIsLoading(false)
       console.log('Entry manually saved successfully!');
     } catch (error) {
@@ -41,6 +39,12 @@ const Editor = ({ entry }) => {
       console.error('Error manually saving entry:', error)
     }
   }
+  
+ 
+
+  
+  
+  const date = new Date(entry.createdAt).toDateString()
 
   return (
     <div className='w-full h-full grid grid-cols-3'>

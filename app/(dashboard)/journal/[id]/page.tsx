@@ -20,30 +20,11 @@ const getEntry = async (id) => {
 
 const EntryPage = async ({ params }) => {
   const entry = await getEntry(params.id);
-const analysisData = [
-  {
-    name:"Summary",value:""
-  },
-  {
-    name:"Subject",value:""
-  },
-  {
-    name:"Mood",value:""
-  },
-  {
-    name:"Negative", value:"False"
-  },
-]
-  
-  
-
   return (
     <div className="h-full w-full ">
       <div >
       <Editor entry={entry} />
       </div>
-     
-    
     </div>
   )
 }

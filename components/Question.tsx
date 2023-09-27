@@ -36,13 +36,13 @@ const Question = () => {
         <button
           disabled={loading}
           type="submit"
-          className="bg-blue-400 px-4 py-2 rounded-lg text-lg"
+          className="bg-blue-400 px-4 py-2 rounded-lg text-lg ml-2"
         >
           Ask
         </button>
       </form>
-      {loading && <div>...loading</div>}
-      {response && <div>{response}</div>}
+      {loading && <div className='p-4 font-montserrat text-lime-400 text-xl font-extrabold'>...loading</div>}
+      {response && <div className='p-4 font-montserrat text-lime-400 text-xl font-extrabold'>{response}</div>}
     </div>
   )
 }

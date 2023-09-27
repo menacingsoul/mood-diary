@@ -4,16 +4,17 @@ import Link from 'next/link'
 const links = [
   { href: '/', label: 'Home' },
   { href: '/journal', label: 'Journal' },
+  { href: '/history', label: 'History' },
 ]
 
 const DashboardLayout=({children})=>
 {
     return <div className="h-screen w-screen relative ">
         <aside className="absolute w-[200px] top-0 left-0 h-full border-r border-black/10 bg-slate-950">
-          <div className=" text-white">Mood</div>
+          <div className=" text-white p-6 text-xl font-montserrat font-semibold">Mood Diary</div>
             <ul>
           {links.map((link) => (
-            <li key={link.href} className="px-2 py-6 text-xl text-white">
+            <li key={link.href} className="p-4  text-white text-lg font-mono font-thin transition duration-300 hover:text-xl  hover:text-lime-400 ">
               <Link href={link.href}>{link.label}</Link>
             </li>
           ))}
